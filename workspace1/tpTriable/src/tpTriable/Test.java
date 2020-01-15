@@ -7,7 +7,37 @@ public class Test {
 	public static void main(String[] args) {
 		// testInt();
 		// testString();
-		testPersonne();
+		// testPersonne();
+		// testArticleTrierParMarque();
+		testArticleTrierParPrix();
+
+	}
+
+	private static void testArticleTrierParPrix() {
+		Article[] tab = { new Article("Zara", 50), new Article("Chanel", 500), new Article("YSL", 1000),
+				new Article("H&M", 10) };
+		for (Article article : tab) {
+			System.out.println(article);
+		}
+		System.out.println("------------------------");
+		Arrays.sort(tab, new ComparePrix());
+		for (Article article : tab) {
+			System.out.println(article);
+		}
+
+	}
+
+	private static void testArticleTrierParMarque() {
+		Article[] tab = { new Article("Zara", 50), new Article("Chanel", 500), new Article("YSL", 1000),
+				new Article("H&M", 10) };
+		for (Article article : tab) {
+			System.out.println(article);
+		}
+		System.out.println("------------------------");
+		Arrays.sort(tab, new CompareMarque());
+		for (Article article : tab) {
+			System.out.println(article);
+		}
 
 	}
 
