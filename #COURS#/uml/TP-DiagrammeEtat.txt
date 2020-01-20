@@ -1,0 +1,11 @@
+Considérons une montre à cadran numérique simplifiée :
+1. Le mode courant est le mode « Affichage ».
+2. Quand on appuie une fois sur le bouton mode, la montre passe en « modification
+heure ». Chaque pression sur le bouton avance incrémente l’heure d’une unité.
+3. Quand on appuie une nouvelle fois sur le bouton mode, la montre passe en
+« modification minute ». Chaque pression sur le bouton avance incrémente les
+minutes d’une unité.
+4. Quand on appuie une nouvelle fois sur le bouton mode, la montre repasse en mode
+« Affichage ».
+
+Dessinez le diagramme d’états correspondant.

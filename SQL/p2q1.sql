@@ -1,0 +1,13 @@
+select ename, sal from emp where sal > 2850;
+select ename, deptno from emp where empno = 7566;
+select ename, sal from emp where sal not between 1500 and 2850;
+select ename, job, hiredate from emp where hiredate between '02/02/81' and '01/05/81' order by hiredate asc;
+select ename, deptno from emp where deptno in (10, 30) order by ename;
+select ename "Employee", sal "Monthly Salary" from emp where sal>1500 and deptno in (10, 30);
+select ename, hiredate from emp where hiredate between '01/01/82' and '31/12/82';
+select ename, job from emp where mgr is null;
+select ename, sal, comm from emp where comm is not null order by sal desc, comm desc;
+select ename from emp where ename like '__A%';
+select ename from emp where ename like '%LL%' and (deptno=30 or mgr=7782);
+select ename, job, sal from emp where job in ('CLERK', 'ANALYST') and sal not in (1000, 3000, 5000);
+select ename, sal, comm from emp where comm > sal+(sal*0.1);
