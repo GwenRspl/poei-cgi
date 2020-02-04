@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="page1.js"></script>
+</head>
+
+<body>
+    <p>Nombre 1 <input id="nb1" type="number"> <br>
+        Nombre 2 <input id="nb2" type="number"> </p>
+    <button onclick="displayResult()">Additioner</button>
+    <button
+        onclick='document.getElementById("alternateResult").innerHTML = add(Number(document.getElementById("nb1").value), Number(document.getElementById("nb2").value));'>Additioner</button>
+    <p id="result"></p>
+    <p id="alternateResult"></p>
+</body>
+
+</html>

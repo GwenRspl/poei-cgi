@@ -1,1 +1,0 @@
-connect SCOTT/TIGER

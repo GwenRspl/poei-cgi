@@ -1,0 +1,21 @@
+body {
+  background-color: cornsilk;
+}
+h1 {
+  color: rebeccapurple;
+}
+p {
+  color: rosybrown;
+}
+
+#h01 {
+  color: greenyellow;
+}
+
+.pinkie {
+  color: pink;
+}
+
+p.pip {
+  color: aquamarine;
+}

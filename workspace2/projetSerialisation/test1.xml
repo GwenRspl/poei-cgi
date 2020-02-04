@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_77" class="java.beans.XMLDecoder">
+ <object class="projetSerialisation.Personne">
+  <void property="age">
+   <int>40</int>
+  </void>
+  <void property="nom">
+   <string>Haddock</string>
+  </void>
+  <void property="prenom">
+   <string>Capitaine</string>
+  </void>
+ </object>
+</java>

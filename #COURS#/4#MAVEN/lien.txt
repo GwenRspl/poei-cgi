@@ -1,0 +1,13 @@
+
+https://maven.apache.org/
+https://mvnrepository.com/
+
+Subclipse 1.10.x Update Site - http://subclipse.tigris.org/update_1.10.x
+
+	<dependency>
+			<groupId>sample</groupId>
+			<artifactId>com.sample</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>C://tmp//pers.jar</systemPath>
+		</dependency>

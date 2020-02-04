@@ -1,0 +1,61 @@
+cas d utilisation
+exemple et solution link
+1.http://javasqlphp.blogspot.fr/2012/10/diagramme-de-cas-dutilisation-exercices.html
+
+Dans un établissement scolaire, on désire gérer la réservation des salles de cours ainsi que du matériel pédagogique (ordinateur portable ou/et Vidéo projecteur). Seuls les enseignants sont habilités à effectuer des réservations (sous réserve de disponibilité de la salle ou du matériel).
+Le planning des salles peut quant à lui être consulté par tout le monde (enseignants et étudiants).
+Par contre, le récapitulatif horaire par enseignant (calculé à partir du planning des salles) ne peut être consulté que par les enseignants.
+Enfin, il existe pour chaque formation un enseignant responsable qui seul peut éditer le récapitulatif horaire pour l’ensemble de la formation.
+diagramme-cas-utilisation-etablissement-scolaire.jpg
+
+http://eric.univ-lyon2.fr/~boussaid/wp-content/uploads/2009/01/TD-N1-Use-Case-corrige.pdf
+
+diagramme de sequence
+2.exemple
+http://javasqlphp.blogspot.fr/2012/08/uml-diagramme-de-sequence-exercice.html
+UML Diagramme de séquence : Exercice avec Correction
+
+
+TP UML diagramme sequence : TD et solution
+
+Le déroulement normal d’utilisation d’un distributeur automatique de billets est le suivant :
+
+
+le client introduit sa carte bancaire
+la machine vérifie alors la validité de la carte et demande le code au client
+si le code est correct, elle envoie une demande d’autorisation de prélèvement au groupement de banques. Ce dernier renvoie le solde autorisé à prélever.
+le distributeur propose alors plusieurs montants à prélever
+le client saisit le montant à retirer
+après contrôle du montant par rapport au solde autorisé, le distributeur demande au client s’il désire un ticket
+Après la réponse du client, la carte est éjectée et récupérée par le client
+les billets sont alors délivrés (ainsi que le ticket)
+le client récupère enfin les billets et son ticket
+
+Travail à Faire :
+
+Modéliser cette situation à l’aide d’un diagramme de séquence en ne prenant en compte que le cas où tout se passe bien.
+
+NB : on identifiera les scénarios qui peuvent poser problème en incluant des commentaires dans le diagramme
+
+3.diagramme de class et sequence et collaboration
+http://devinfos.blogspot.fr/2012/11/exercice-uml-gestion-dentrepot-de.html
+
+Exercice UML : Gestion d'entrepôt de Stockage Diagramme de séquence & Classe
+
+Enoncé :
+Pour faciliter sa gestion, un entrepôt de stockage envisage de s’informatiser. Le logiciel à produire doit allouer automatique un emplacement pour le chargement des camions qui convoient le stock à entreposer.
+Le fonctionnent du système informatique doit être le suivant :
+déchargement d’un camion : lors de l’arrivée d’un camion, un employé doit saisir dans le système les caractéristiques de chaque article ; le système produit alors une liste où figure un emplacement pour chaque article ;
+chargement d’un camion : les caractéristiques des articles à charger dans un camion sont saisies par un employé afin d’indiquer au système de libérer des emplacements.
+Le chargement et le déchargement sont réalisés manuellement.
+Les employés de l’entrepôt sont sous la responsabilité d’un chef dont le rôle est de superviser la bonne application des consignes.
+Travail à Faire :
+
+Donner  le Diagramme de séquence pour le cas déchargement d’un camion
+Donner le Diagramme de collaboration correspondant
+Donner le Diagramme des classes
+
+SQ8...
+
+4.diagramme de classe/ d objet
+http://uml.free.fr/cours/i-p14.html

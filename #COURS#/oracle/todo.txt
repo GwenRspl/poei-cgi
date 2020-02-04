@@ -1,3 +1,0 @@
-sql>connect / as sysdba
-sql> start scott.sql
-sql> connect scott / TIGER
