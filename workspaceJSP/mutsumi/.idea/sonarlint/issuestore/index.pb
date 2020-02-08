@@ -11,3 +11,5 @@ Z
 *src/main/java/controller/ServletLogin.java,c/3/c3593fcb244c60f03372047de1125fee93980512
 P
  src/main/webapp/login-result.jsp,c/7/c742884f783df048e5db02d8837bf87b6c8aa42d
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392

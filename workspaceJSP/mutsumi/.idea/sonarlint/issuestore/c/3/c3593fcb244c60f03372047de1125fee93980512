@@ -1,9 +1,10 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ì®ñûÿÿÿÿ8ˆ¼¾©‚.
-Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.
-Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.
 Osquid:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿
-[squid:UnusedPrivateMethod"1Remove this unused private "authenticate" method.(¯ùç…8ˆ¼¾©‚.
+Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8Ï¿©‚.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.
+Xsquid:S2441"<Make "Client" serializable or don't store it in the session.(ÀáÒ8Ù°è©‚.
 Tsquid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ù°è©‚.
+Csquid:S1989"'Add a "try/catch" block for "parseInt".(ˆÛžƒ8Ù°è©‚.
 Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8Ï¿©‚.
-Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8Ï¿©‚.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.

@@ -1,9 +1,9 @@
 
-Gsquid:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´˜ÀÑûÿÿÿÿ
-\squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(«Ä¶Ø
-asquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‰ð—Çýÿÿÿÿ
 dsquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÀÖÐ½
 <squid:S2068" Remove this hard-coded password.(ªª»—8´ËÍ§‚.
-@squid:S1168"+Return an empty collection instead of null.(¥¹ï
+\squid:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(«Ä¶Ø
+asquid:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‰ð—Çýÿÿÿÿ
+Gsquid:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´˜ÀÑûÿÿÿÿ
 –squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ƒ‚Ðÿ
+@squid:S1168"+Return an empty collection instead of null.(¥¹ï
