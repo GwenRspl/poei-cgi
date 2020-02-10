@@ -1,18 +1,43 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="header.jsp" %>
 <html>
+
 <head>
+    <%@ include file="bootstrap.jsp" %>
     <title>Login page</title>
+
 </head>
+
 <body>
-<h1>Login</h1>
+    <%@ include file="nav.jsp" %>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                
+                    <h1>Login</h1>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <form action="ServletLogin" method="POST">
+                            <div class="form-group">
+                                <label for="id">Identifiant</label>
+                                <input type="number" class="form-control" name="id" id="id">
+                            </div>
+                            <div class="form-group">
+                                <label for="mdp">Mot de passe</label>
+                                <input type="password" class="form-control" name="password" id="mdp">
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-block">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
 
-<form action="ServletLogin" method="POST">
-    Identifiant <br>
-    <input type="number" name="id"> <br>
-    Mot de passe <br>
-    <input type="password" name="password"> <br>
-    <button type="submit">Login</button>
-</form>
+            </div>
+        </div>
 
+    </div>
 </body>
+
 </html>

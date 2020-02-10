@@ -1,0 +1,10 @@
+
+Osquid:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿
+Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8Ï¿©‚.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.
+Xsquid:S2441"<Make "Client" serializable or don't store it in the session.(ÀáÒ8Ù°è©‚.
+Tsquid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ù°è©‚.
+Csquid:S1989"'Add a "try/catch" block for "parseInt".(ˆÛƒ8Ù°è©‚.
+Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8Ï¿©‚.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(‘‰Ù™8ë¥³©‚.

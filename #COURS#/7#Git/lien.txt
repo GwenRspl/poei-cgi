@@ -1,0 +1,15 @@
+http://172.31.54.45/svn/svnroot/
+Subclipse 1.10.x Update Site - http://subclipse.tigris.org/update_1.10.x
+
+http://10.0.0.26/svn/svnroot
+
+https://stackoverflow.com/questions/2745076/what-are-the-differences-between-git-commit-and-git-push
+
+
+https://github.com
+
+https://www.1and1.fr/digitalguide/sites-internet/developpement-web/git-ou-svn-comparaison-doutils-de-versionning/
+
+https://openclassrooms.com/fr/courses/6106191-installez-votre-environnement-de-developpement-java-avec-eclipse/6250116-utilisez-eclipse-pour-envoyer-des-corrections-sur-github
+
+https://guides.github.com/activities/hello-world/

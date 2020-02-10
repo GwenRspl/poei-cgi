@@ -1,10 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="header.jsp" %>
 <html>
 <head>
+<%@ include file="bootstrap.jsp" %>
     <title>Login result</title>
 </head>
 <body>
+<%@ include file="nav.jsp" %>
+<div class="container">
 <h1>
     <c:if test="${empty client}">
         Identifiant ou mot de passe incorrect.
@@ -12,8 +14,9 @@
 
     <c:if test="${not empty client}">
         Bienvenue <c:out value="${client.prenom}"/> <c:out value="${client.nom}"/> <br>
-        Tu es dÃ©sormais authentifiÃ© !
+        Tu es désormais authentifié !
     </c:if>
 </h1>
+</div>
 </body>
 </html>

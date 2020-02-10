@@ -1,32 +1,28 @@
 package listener;
 
-import model.Article;
+import java.util.HashMap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-import javax.servlet.http.HttpSessionBindingEvent;
-import java.util.HashMap;
+
+import model.Article;
 
 @WebListener()
 public class ListenerPanier implements HttpSessionListener {
 
-    // Public constructor is required by servlet spec
-    public ListenerPanier() {
-    }
+	// Public constructor is required by servlet spec
+	public ListenerPanier() {
+	}
 
-    public void sessionCreated(HttpSessionEvent se) {
-        /* Session is created. */
-        HashMap<Article,Integer> panier = new HashMap<>();
-        se.getSession().setAttribute("panier",panier);
-    }
+	public void sessionCreated(HttpSessionEvent se) {
+		HashMap<Article, Integer> panier = new HashMap<>();
+		se	.getSession()
+			.setAttribute("panier", panier);
+	}
 
-    public void sessionDestroyed(HttpSessionEvent se) {
-        /* Session is destroyed. */
-    }
-
+	public void sessionDestroyed(HttpSessionEvent se) {
+		/* Session is destroyed. */
+	}
 
 }
