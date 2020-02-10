@@ -18,7 +18,7 @@ public class ServletLogin extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request	.getRequestDispatcher("login-result.jsp")
+		request	.getRequestDispatcher("login.jsp")
 				.forward(request, response);
 	}
 
@@ -37,7 +37,8 @@ public class ServletLogin extends HttpServlet {
 			request	.getSession()
 					.setAttribute("client", c);
 		}
-		doGet(request, response);
+		request	.getRequestDispatcher("login-result.jsp")
+				.forward(request, response);
 	}
 
 	private Client authenticate(int id, String mdp) throws SQLException, ClassNotFoundException {

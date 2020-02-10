@@ -6,6 +6,9 @@
 </head>
 <body>
 <%@ include file="nav.jsp" %>
+<div class="jumbotron">
+    <h1 class="display-4">SUCCES</h1>
+</div>
 <div class="container">
 <h1>
     <c:if test="${empty client}">
@@ -14,7 +17,7 @@
 
     <c:if test="${not empty client}">
         Bienvenue <c:out value="${client.prenom}"/> <c:out value="${client.nom}"/> <br>
-        Tu es désormais authentifié !
+        Tu es dï¿½sormais authentifiï¿½ !
     </c:if>
 </h1>
 </div>

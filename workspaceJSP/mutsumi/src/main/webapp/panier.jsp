@@ -8,8 +8,10 @@
 
 <body>
     <%@ include file="nav.jsp" %>
+    <div class="jumbotron">
+        <h1 class="display-4">PASSER UNE COMMANDE</h1>
+    </div>
     <div class="container">
-
         <h1>Passer une commande</h1>
         <div class="row">
             <div class="col-7">
@@ -32,7 +34,7 @@
                         </div>
                         <div class="col-2">
                             <div class="form-group">
-                                <label for="quantity">Quantité</label>
+                                <label for="quantity">Quantite</label>
                                 <input type="number" name="quantity" min="1" value="1" class="form-control"
                                     id="quantity">
                             </div>
@@ -53,32 +55,39 @@
                     <c:out value="${montantTotal}" />
                     euros
                 </h4>
-                <table class="table table-striped">
-                    <thead class="thead-dark">
+                <c:if test="${empty panier}">
+                    Votre panier est vide.
+                </c:if>
+
+                <c:if test="${not empty panier}">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
                         <tr>
                             <th>Article</th>
-                            <th>Quantité</th>
+                            <th>Quantite</th>
                             <th>Prix total</th>
                         </tr>
-                    </thead>
-                    <c:forEach items="${panier}" var="item">
-                        <tr>
-                            <td>
-                                <c:out value="${item.key.nom}" />
-                            </td>
-                            <td>
-                                <c:out value="${item.value}" />
-                            </td>
-                            <td>
-                                <c:out value="${item.value * item.key.prix}" />
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </table>
+                        </thead>
+                        <c:forEach items="${panier}" var="item">
+                            <tr>
+                                <td>
+                                    <c:out value="${item.key.nom}" />
+                                </td>
+                                <td>
+                                    <c:out value="${item.value}" />
+                                </td>
+                                <td>
+                                    <c:out value="${item.value * item.key.prix}" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
 
-                <form action="ServletCommande" method="GET">
-                    <button type="submit" class="btn btn-dark">Valider le panier</button>
-                </form>
+                    <form action="ServletCommande" method="GET">
+                        <button type="submit" class="btn btn-dark">Valider le panier</button>
+                    </form>
+                </c:if>
+
             </div>
         </div>
 

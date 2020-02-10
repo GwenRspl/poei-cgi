@@ -23,8 +23,8 @@
                 <li class="nav-item ${pagina.endsWith('inscription.jsp') ? 'active' : ''}">
                     <a class="nav-link" href="inscription.jsp">Inscription</a>
                 </li>
-                <li class="nav-item ${pagina.endsWith('login.jsp') ? 'active' : ''}">
-                    <a class="nav-link" href="login.jsp">Login</a>
+                <li class="nav-item ${pagina.endsWith('Login') ? 'active' : ''}">
+                    <a class="nav-link" href="ServletLogin">Login</a>
                 </li>
             </c:if>
 

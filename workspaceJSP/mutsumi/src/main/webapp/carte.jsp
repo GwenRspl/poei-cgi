@@ -6,7 +6,9 @@
 </head>
 <body>
 <%@ include file="nav.jsp" %>
-<h1>La carte</h1>
+<div class="jumbotron">
+    <h1 class="display-4">LA CARTE</h1>
+</div>
 
 </body>
 </html>
