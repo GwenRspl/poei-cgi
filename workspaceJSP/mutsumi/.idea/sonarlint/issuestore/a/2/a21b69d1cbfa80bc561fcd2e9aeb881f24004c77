@@ -1,18 +1,17 @@
 
-hsquid:S1192"GDefine a constant instead of duplicating this literal "panier" 3 times.(Ğé±îşÿÿÿÿ8‡€¶‚.
-Ssquid:S1135"2Complete the task associated to this TODO comment.(ãÅ›úÿÿÿÿ8„‚¶´‚.
-Gsquid:S1989"&Add a "try/catch" block for "forward".(ÊéÃ´ûÿÿÿÿ8‰…‹´‚.
-Gsquid:S1989"&Add a "try/catch" block for "forward".(ÊéÃ´ûÿÿÿÿ8‰…‹´‚.
-Csquid:S1989"'Add a "try/catch" block for "parseInt".(ÃÒÕ·8ÑŸ¡µ‚.
+Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8ğÍ°µ‚.
 Csquid:S1989"'Add a "try/catch" block for "parseInt".(Ğªò8ô¶ µ‚.
 Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8ğÍ°µ‚.
-Esquid:S1172")Remove this unused method parameter "id".(Æå†8óĞºµ‚.
-Ssquid:S1135"2Complete the task associated to this TODO comment.(ãÅ›úÿÿÿÿ8Î¢¾µ‚.
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ìº°¿úÿÿÿÿ8ı•µ´‚.
-Osquid:S1161":Add the "@Override" annotation above this method signature(‹¨¯¿
-Tsquid:S1161":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
-Esquid:S1989"$Add a "try/catch" block for "doGet".(®Ó‘ûÿÿÿÿÿ8ğÍ°µ‚.
-{squid:S1488"_Immediately return this expression instead of assigning it to the temporary variable "article".(¸ò »8ÙÓ¹µ‚.
+Csquid:S1989"'Add a "try/catch" block for "parseInt".(ÃÒÕ·8ÑŸ¡µ‚.
 squid:S4165"eRemove this useless assignment; "request" already holds the assigned value along all execution paths.(Îâ¤8’¢Øµ‚.
-dsquid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8ÈäÇµ‚.
-qsquid:S2441"PMake "HashMap" and its parameters serializable or don't store it in the session.(—äŞ¤üÿÿÿÿ8ÈäÇµ‚.
+csquid:S1192"GDefine a constant instead of duplicating this literal "panier" 3 times.(ó…ÿ8’‚¼ƒ.
+|squid:S1488"`Immediately return this expression instead of assigning it to the temporary variable "articles".(ğ…¼8’‚¼ƒ.
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’‚¼ƒ.
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8’‚¼ƒ.
+Vsquid:S1161":Add the "@Override" annotation above this method signature(÷¤‹ú8’‚¼ƒ.
+Ssquid:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8’‚¼ƒ.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(ÈÑ¼ã8’‚¼ƒ.
+Bsquid:S1989"&Add a "try/catch" block for "forward".(ÈÑ¼ã8’‚¼ƒ.
+[squid:S1161":Add the "@Override" annotation above this method signature(ş³‚”ûÿÿÿÿ8’‚¼ƒ.
+Ssquid:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8’‚¼ƒ.
+qsquid:S2441"PMake "HashMap" and its parameters serializable or don't store it in the session.(•úĞşÿÿÿÿ8’‚¼ƒ.

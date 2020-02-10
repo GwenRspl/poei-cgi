@@ -1,6 +1,12 @@
 package controller;
 
+import dao.DaoArticleJdbc;
+import model.Article;
+
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +35,15 @@ public class ServletCarte extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		List<Article> articles = new ArrayList<>();
+		try {
+			articles = this.retrieveArticles();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		request.setAttribute("articles", articles);
 		request	.getRequestDispatcher("carte.jsp")
 				.forward(request, response);
 	}
@@ -41,6 +56,10 @@ public class ServletCarte extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+	}
+
+	private List<Article> retrieveArticles() throws SQLException, ClassNotFoundException {
+		return new DaoArticleJdbc().find();
 	}
 
 }

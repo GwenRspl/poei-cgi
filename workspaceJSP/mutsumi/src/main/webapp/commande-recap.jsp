@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
 <html>
 
@@ -8,7 +9,7 @@
 
 <body>
     <%@ include file="nav.jsp" %>
-    <div class="jumbotron">
+    <div class="jumbotron text-center">
         <h1 class="display-4">RECAPITULATIF COMMANDE</h1>
     </div>
     <div class="container">
@@ -19,7 +20,7 @@
         <p>La commande de
             <c:out value="${client.prenom}" />
             <c:out value="${client.nom}" /> d'un montant total de
-            <c:out value="${montantTotal}" />
+            <c:out value="${montantTotal}€" />
         </p>
 
         <div class="row">
@@ -41,7 +42,7 @@
                                 <c:out value="${item.value}" />
                             </td>
                             <td>
-                                <c:out value="${item.value * item.key.prix}" />
+                                <c:out value="${item.value * item.key.prix}€" />
                             </td>
                         </tr>
                     </c:forEach>

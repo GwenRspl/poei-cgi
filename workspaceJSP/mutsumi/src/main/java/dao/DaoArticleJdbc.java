@@ -34,6 +34,7 @@ public class DaoArticleJdbc implements DaoArticle {
 			art.setId(rs.getInt("idarticle"));
 			art.setNom(rs.getString("article"));
 			art.setPrix(rs.getDouble("prix"));
+			art.setImage(rs.getString("image"));
 			art.setDescription(rs.getString("description"));
 			Liste.add(art);
 		}
@@ -55,6 +56,7 @@ public class DaoArticleJdbc implements DaoArticle {
 			art.setId(rs.getInt("idarticle"));
 			art.setNom(rs.getString("article"));
 			art.setPrix(rs.getInt("prix"));
+			art.setImage(rs.getString("image"));
 			art.setDescription(rs.getString("description"));
 
 		}
