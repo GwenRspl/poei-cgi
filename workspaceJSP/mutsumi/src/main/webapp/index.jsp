@@ -25,6 +25,7 @@
 
 <body>
 <%@ include file="nav.jsp" %>
+
 <div class="pimg1">
   <div class="ptext">
       <span class="my-border">
@@ -32,6 +33,8 @@
       </span>
   </div>
 </div>
+
+
 
 <section class="section section-dark">
   <h2> 人気のレシピ</h2>

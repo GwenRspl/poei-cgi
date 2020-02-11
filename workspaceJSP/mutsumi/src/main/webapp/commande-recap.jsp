@@ -14,9 +14,6 @@
     </div>
     <div class="container">
 
-
-        <h1>Recap commande </h1>
-
         <p>La commande de
             <c:out value="${client.prenom}" />
             <c:out value="${client.nom}" /> d'un montant total de
@@ -57,7 +54,12 @@
             </div>
             <div class="col">
                 <form action="ServletValidationCommande" method="GET">
-                    <button type="submit" class="btn btn-dark float-right">Valider la commande</button>
+                <c:if test="${not empty panier}">
+                 <button type="submit" class="btn btn-dark float-right">Valider la commande</button>
+                 </c:if>
+                <c:if test="${empty panier}">
+                    <button type="submit" class="btn btn-dark float-right" disabled>Valider la commande</button>
+                 </c:if>
                 </form>
             </div>
         </div>

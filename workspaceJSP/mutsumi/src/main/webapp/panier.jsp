@@ -13,11 +13,10 @@
         <h1 class="display-4">PASSER UNE COMMANDE</h1>
     </div>
     <div class="container">
-        <h1>Passer une commande</h1>
         <div class="row">
             <div class="col-7">
 
-                <p>Fais ton choix parmi les plats suivants:</p>
+                <p>Faites votre choix parmi les plats suivants:</p>
 
                 <form action="ServletPanierCommande" method="POST">
                     <div class="form-row">
@@ -27,7 +26,7 @@
                                 <select name="articleSelect" id="select" class="form-control">
                                     <c:forEach items="${articles}" var="article">
                                         <option value="${article.id}">
-                                            <c:out value="${article.nom}" />
+                                            <c:out value="${article.nom} - ${article.prix}€" />
                                         </option>
                                     </c:forEach>
                                 </select>
@@ -35,7 +34,7 @@
                         </div>
                         <div class="col-2">
                             <div class="form-group">
-                                <label for="quantity">Quantite</label>
+                                <label for="quantity">Quantité</label>
                                 <input type="number" name="quantity" min="1" value="1" class="form-control"
                                     id="quantity">
                             </div>
@@ -65,7 +64,7 @@
                         <thead class="thead-dark">
                         <tr>
                             <th>Article</th>
-                            <th>Quantite</th>
+                            <th>Quantité</th>
                             <th>Prix total</th>
                         </tr>
                         </thead>

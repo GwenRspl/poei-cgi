@@ -20,8 +20,8 @@
         </ul>
         <ul class="navbar-nav navbar-right">
             <c:if test="${empty client}">
-                <li class="nav-item ${pagina.endsWith('inscription.jsp') ? 'active' : ''}">
-                    <a class="nav-link" href="inscription.jsp">Inscription</a>
+                <li class="nav-item ${pagina.endsWith('Inscription') ? 'active' : ''}">
+                    <a class="nav-link" href="ServletInscription">Inscription</a>
                 </li>
                 <li class="nav-item ${pagina.endsWith('Login') ? 'active' : ''}">
                     <a class="nav-link" href="ServletLogin">Login</a>
@@ -29,9 +29,11 @@
             </c:if>
 
             <c:if test="${not empty client}">
+            <!-- <form method="GET" action="ServletLogOut"> -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="ServletLogOut">Logout</a>
                 </li>
+              <!-- </form> -->
             </c:if>
 
         </ul>
