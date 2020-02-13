@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Version;
@@ -26,7 +27,8 @@ public class Computer {
 		SN = sN;
 	}
 
-	@OneToOne(mappedBy = "pc")
+	// @OneToOne(mappedBy = "pc")
+	@OneToOne(mappedBy = "pc", fetch = FetchType.LAZY)
 	public Personne getPersonne() {
 		return personne;
 	}

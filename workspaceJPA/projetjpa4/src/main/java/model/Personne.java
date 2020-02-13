@@ -1,10 +1,9 @@
 package model;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Version;
 
 @Entity
@@ -14,7 +13,7 @@ public class Personne {
 	private String nom;
 	private String prenom;
 	private int age;
-	private Computer pc;
+	private Departement dept;
 
 	private int version;
 
@@ -26,14 +25,6 @@ public class Personne {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
-	}
-
-	public Personne(int id, String nom, String prenom, int age, Computer pc) {
-		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.age = age;
-		this.pc = pc;
 	}
 
 	@Id
@@ -52,6 +43,16 @@ public class Personne {
 
 	public void setVersion(int version) {
 		this.version = version;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "dept_id")
+	public Departement getDept() {
+		return dept;
+	}
+
+	public void setDept(Departement dept) {
+		this.dept = dept;
 	}
 
 	public String getNom() {
@@ -78,20 +79,10 @@ public class Personne {
 		this.age = age;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "COMPUTER_ID")
-	public Computer getPc() {
-		return pc;
-	}
-
-	public void setPc(Computer pc) {
-		this.pc = pc;
-	}
-
 	@Override
 	public String toString() {
-		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", version=" + version
-				+ "]";
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", dept=" + dept
+				+ ", version=" + version + "]";
 	}
 
 }

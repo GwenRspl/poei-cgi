@@ -12,7 +12,7 @@ public class test {
 
 	public static void main(String[] args) {
 
-		testFindComputer();
+		testFindPersonne();
 	}
 
 	static void testConnexion() {
@@ -29,12 +29,12 @@ public class test {
 
 		Computer pc = em.find(Computer.class, "SN789");
 		System.out.println(pc);
-		System.out.println(pc.getModel());
-		System.out.println(pc	.getPersonne()
-								.getNom());
 
 		em.close();
 		emf.close();
+		System.out.println(pc.getModel());
+		System.out.println(pc	.getPersonne()
+								.getNom());
 	}
 
 	static void testFindPersonne() {
@@ -42,12 +42,12 @@ public class test {
 		EntityManager em = emf.createEntityManager();
 
 		Personne p = em.find(Personne.class, 1);
-		System.out.println(p.getNom());
-		System.out.println(p.getPc()
-							.getModel());
 
 		em.close();
 		emf.close();
+		System.out.println(p.getNom());
+		System.out.println(p.getPc()
+							.getModel());
 	}
 
 	static void testCreate() {

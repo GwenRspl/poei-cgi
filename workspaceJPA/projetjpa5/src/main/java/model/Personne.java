@@ -1,10 +1,13 @@
 package model;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Version;
 
 @Entity
@@ -14,7 +17,7 @@ public class Personne {
 	private String nom;
 	private String prenom;
 	private int age;
-	private Computer pc;
+	private Collection<Projet> projets;
 
 	private int version;
 
@@ -26,14 +29,6 @@ public class Personne {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
-	}
-
-	public Personne(int id, String nom, String prenom, int age, Computer pc) {
-		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.age = age;
-		this.pc = pc;
 	}
 
 	@Id
@@ -52,6 +47,16 @@ public class Personne {
 
 	public void setVersion(int version) {
 		this.version = version;
+	}
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "EMP_PROJ", joinColumns = @JoinColumn(name = "EMPLOYEE_ID"), inverseJoinColumns = @JoinColumn(name = "PROJECT_ID"))
+	public Collection<Projet> getProjets() {
+		return projets;
+	}
+
+	public void setProjets(Collection<Projet> projets) {
+		this.projets = projets;
 	}
 
 	public String getNom() {
@@ -76,16 +81,6 @@ public class Personne {
 
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "COMPUTER_ID")
-	public Computer getPc() {
-		return pc;
-	}
-
-	public void setPc(Computer pc) {
-		this.pc = pc;
 	}
 
 	@Override
