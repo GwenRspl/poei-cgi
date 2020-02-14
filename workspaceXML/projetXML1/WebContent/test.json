@@ -1,0 +1,42 @@
+{
+  "société": [
+    {
+      "employé": {
+        "nom": "Haddock",
+        "prenom": "Capitaine",
+        "age": 43,
+        "majeur": true,
+        "adresse": {
+          "numero": 5,
+          "rue": "rue des algues",
+          "cp": "36000"
+        },
+        "compte": {
+          "banque": "ING",
+          "rib": "78945622548"
+        },
+        "affectation": null
+      }
+    },
+    {
+      "employé": {
+        "nom": "Tournesol",
+        "prenom": "Professeur",
+        "age": 62,
+        "majeur": true,
+        "adresse": {
+          "numero": 7,
+          "rue": "rue des horloges",
+          "cp": "36000"
+        },
+        "compte": {
+          "banque": "N26",
+          "rib": "78945992548"
+        },
+        "affectation": {
+          "projet": "projet1"
+        }
+      }
+    }
+  ]
+}
