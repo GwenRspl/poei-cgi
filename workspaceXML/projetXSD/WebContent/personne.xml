@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<personne xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="personne.xsd">
+	<nom>Haddock</nom>
+	<prenom>Capitaine</prenom>
+	<age>42</age>
+	<status>majeur</status>
+	<etude>Ingenieur</etude>
+</personne>

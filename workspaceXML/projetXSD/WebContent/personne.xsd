@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="personne">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom" type="xs:string" />
+				<xs:element name="prenom" type="xs:string" />
+				<xs:element name="age">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:minInclusive value="0" />
+							<xs:maxInclusive value="120" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="status">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="mineur|majeur" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="etude">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Bac" />
+							<xs:enumeration value="Ingenieur" />
+							<xs:enumeration value="Master" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
