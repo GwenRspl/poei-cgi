@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config></context:annotation-config>
+
+	<context:component-scan base-package="formationSpring.beans"></context:component-scan>
+
+<!-- 	<bean id="personne" class="formationSpring.beans.Personne"> 
+		<property name="nom" value="Haddock"></property>
+		<property name="prenom" value="Capitaine"></property>
+		<property name="age" value="41"></property>
+		<property name="adresse" ref="adresse"></property>
+	</bean>
+
+	<bean id="adresse" class="formationSpring.beans.Adresse">
+		<property name="num" value="5"></property>
+		<property name="rue" value="rue de Strasbourg"></property>
+		<property name="cp" value="94300"></property>
+	</bean>
+
+	<bean id="javaCollection" class="formationSpring.beans.JavaCollection">
+		<property name="adressList">
+			<list>
+				<value>Inde</value>
+				<value>Pakistan</value>
+				<value>France</value>
+				<value>Japon</value>
+			</list>
+		</property>
+		
+		<property name="adressMap">
+			<map>
+				<entry key="1" value="India"/>
+				<entry key="2" value="Pakistan"/>
+				<entry key="3" value="France"/>
+				<entry key="4" value="Japon"/>
+
+			</map>
+		</property>
+	</bean> -->
+	
+	
+
+</beans>
