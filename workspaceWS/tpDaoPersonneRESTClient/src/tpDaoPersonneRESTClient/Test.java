@@ -13,18 +13,19 @@ import javax.ws.rs.core.Response;
 public class Test {
 
 	public static void main(String[] args) {
-		// testSelectAll();
-		testFindById();
+		testSelectAll();
+		// testFindById();
 		// testCreate();
+		// testUpdate();
+		// testDelete();
 
 	}
 
 	private static void testSelectAll() {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes");
-		List<Personne> m = target	.request(MediaType.APPLICATION_JSON)
-									.get(new GenericType<List<Personne>>() {
-									});
+		List<Personne> m = target.request(MediaType.APPLICATION_JSON).get(new GenericType<List<Personne>>() {
+		});
 
 		System.out.println(m);
 		for (Personne personne : m) {
@@ -35,10 +36,8 @@ public class Test {
 
 	private static void testFindById() {
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client	.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes")
-									.path("4");
-		Personne m = target	.request(MediaType.APPLICATION_JSON)
-							.get(Personne.class);
+		WebTarget target = client.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes").path("4");
+		Personne m = target.request(MediaType.APPLICATION_JSON).get(Personne.class);
 		System.out.println("response : " + m);
 
 	}
@@ -48,9 +47,26 @@ public class Test {
 		personne.setId(14);
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes");
-		Response m = target	.request(MediaType.APPLICATION_JSON)
-							.post(Entity.entity(personne, MediaType.APPLICATION_JSON));
+		Response m = target.request(MediaType.APPLICATION_JSON)
+				.post(Entity.entity(personne, MediaType.APPLICATION_JSON));
 		System.out.println("div : " + m);
+	}
+
+	private static void testUpdate() {
+		Personne personne = new Personne("Madame", "Toutlemonde");
+		personne.setId(14);
+		Client client = ClientBuilder.newClient();
+		WebTarget target = client.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes");
+		Response m = target.request(MediaType.APPLICATION_JSON)
+				.put(Entity.entity(personne, MediaType.APPLICATION_JSON));
+		System.out.println("div : " + m);
+	}
+
+	private static void testDelete() {
+		Client client = ClientBuilder.newClient();
+		WebTarget target = client.target("http://localhost:8080/tpDaoPersonneRESTServer/dao/personnes").path("14");
+		Response m = target.request(MediaType.APPLICATION_JSON).delete();
+		System.out.println("response : " + m);
 	}
 
 }

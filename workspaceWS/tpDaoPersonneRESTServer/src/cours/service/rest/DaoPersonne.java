@@ -8,33 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+public class DaoPersonne {
 
-@Path("/dao")
-public class DaoPersonneService {
-
-	public DaoPersonneService() {
-
-	}
-
-	@GET
-	@Path("/test")
-	@Produces(MediaType.APPLICATION_JSON)
-	public String test() {
-		return "test working..";
-	}
-
-	@GET
-	@Path("/personnes")
-	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Personne> selectAll() {
 		ArrayList<Personne> personnes = new ArrayList<>();
 		try {
@@ -55,16 +30,12 @@ public class DaoPersonneService {
 			st.close();
 			conn.close();
 		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return personnes;
 	}
 
-	@GET
-	@Path("/personnes/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Personne findById(@PathParam(value = "id") int id) {
+	public Personne findById(int id) {
 		Personne personne = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -84,17 +55,12 @@ public class DaoPersonneService {
 			st.close();
 			conn.close();
 		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return personne;
 	}
 
-	@POST
-	@Path("/personnes")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public String create(Personne p) {
+	public void create(Personne p) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
@@ -110,20 +76,12 @@ public class DaoPersonneService {
 
 			ps.close();
 			conn.close();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		return "personne enregistrée en DB";
 	}
 
-	@DELETE
-	@Path("/personnes/{id}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public String delete(@PathParam(value = "id") int id) {
+	public void delete(int id) {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		try {
@@ -137,20 +95,12 @@ public class DaoPersonneService {
 			ps.close();
 			conn.close();
 
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		return "ok";
 	}
 
-	@PUT
-	@Path("/personnes")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public String update(Personne p) {
+	public void update(Personne p) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cgi", "root", "root");
@@ -166,13 +116,9 @@ public class DaoPersonneService {
 			ps.close();
 			conn.close();
 
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		return "ok";
 	}
 
 }
