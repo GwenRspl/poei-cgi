@@ -1,5 +1,7 @@
 package com.gwenrspl.spring_test.config;
 
+import java.util.Properties;
+
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -34,6 +36,17 @@ public class AppConfig {
 		emFactoryBean.setJpaProperties(this.hibernateProperties());
 
 		return emFactoryBean;
+	}
+
+	private Properties hibernateProperties() {
+		Properties properties = new Properties();
+		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
+		properties.setProperty("hibernate.show_sql", "true");
+		properties.setProperty("hibernate.format_sql", "true");
+
+		return properties;
+
 	}
 
 }
