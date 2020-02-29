@@ -6,12 +6,18 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.persistence.EntityManagerFactory;
 
 @Configuration
-@ComponentScan({ "com.gwenrspl.spring_test.beans" })
+@ComponentScan({"com.gwenrspl.spring_test.dao"})
+@EnableTransactionManagement
 public class AppConfig {
 
 	@Bean
@@ -29,12 +35,10 @@ public class AppConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(BasicDataSource dataSource) {
 		LocalContainerEntityManagerFactoryBean emFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-
 		emFactoryBean.setDataSource(dataSource);
-		emFactoryBean.setPackagesToScan("com.gwenrspl.beans.model");
+		emFactoryBean.setPackagesToScan("com.gwenrspl.spring_test.model");
 		emFactoryBean.setJpaVendorAdapter(vendorAdapter);
 		emFactoryBean.setJpaProperties(this.hibernateProperties());
-
 		return emFactoryBean;
 	}
 
@@ -44,9 +48,21 @@ public class AppConfig {
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
 		properties.setProperty("hibernate.show_sql", "true");
 		properties.setProperty("hibernate.format_sql", "true");
-
 		return properties;
-
 	}
+	
+	@Bean
+	public JpaTransactionManager transactionManager(EntityManagerFactory emf){
+		JpaTransactionManager transactionManager = new JpaTransactionManager();
+		transactionManager.setEntityManagerFactory(emf);
+		return transactionManager;
+	}
+
+	@Bean
+	public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
+		return new PersistenceExceptionTranslationPostProcessor();
+	}
+
+	
 
 }
