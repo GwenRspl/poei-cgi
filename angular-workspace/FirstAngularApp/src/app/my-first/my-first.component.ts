@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-first',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-first.component.sass']
 })
 export class MyFirstComponent implements OnInit {
+  @Input() username: string;
+  @Input() lastName: string;
 
   constructor() { }
 

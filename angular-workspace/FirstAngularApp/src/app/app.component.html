@@ -1,17 +1,27 @@
-<div style="text-align: center;">
-  <h1>Welcome to {{title}}</h1>
-</div>
-<app-my-first></app-my-first>
-
 <div class="container">
+
+  <div style="text-align: center;">
+    <h1>Welcome to {{title}}</h1>
+  </div>
+
+  <!--<app-my-first username="{{username}}" lastName="{{lastName}}"></app-my-first>
+
   <div class="row">
     <div class="col-xs-12">
       <h2>Mes appareils</h2>
       <ul class="list-group">
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
+        <li class="list-group-item" *ngFor="let item of appareils">
+          <app-appareil appareilName="{{item}}" [username]="username" [lastname]="lastName"
+            (ratingUsername)="onRatingUsername($event)" (ratingLastName)="onRatingLastName($event)">
+          </app-appareil>
+        </li>
       </ul>
+      <button class="btn btn-success" [disabled]="!isAuth" (click)="onAllumer()">Tout allumer</button>
     </div>
   </div>
+  <h1>Formulaire</h1>
+  <app-formulaire></app-formulaire>
+
+  <br><br><br> -->
+  <app-personne></app-personne>
 </div>
