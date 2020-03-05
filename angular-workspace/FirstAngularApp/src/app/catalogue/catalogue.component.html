@@ -1,0 +1,42 @@
+<div class="container">
+  <u>
+    <li *ngFor="let item of userList">{{item.name}}</li>
+  </u>
+</div>
+<br>
+<div class="container">
+  <input type="text" name="input" id="" [(ngModel)]="searchString">
+  <table class="table table-striped" *ngIf="productsList.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Code</th>
+        <th scope="col">Release Date</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productsList | filter:searchString ">
+        <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productCode}}</td>
+        <td>{{item.releaseDate}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}€</td>
+        <td>{{item.starRating}}/5
+          <star-rating value="4" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false" totalstars="5">
+          </star-rating>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+</div>

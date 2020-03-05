@@ -1,8 +1,26 @@
-<div class="container">
-
-  <div style="text-align: center;">
-    <h1>Welcome to {{title}}</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink='home'>Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink='users'>Liste Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='catalogue'>Catalogue</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='inscription'>Inscription</a>
+      </li>
+    </ul>
   </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
 
   <!--<app-my-first username="{{username}}" lastName="{{lastName}}"></app-my-first>
 
@@ -23,5 +41,5 @@
   <app-formulaire></app-formulaire>
 
   <br><br><br> -->
-  <app-personne></app-personne>
+  <!-- <app-personne></app-personne> -->
 </div>

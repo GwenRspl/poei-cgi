@@ -1,4 +1,5 @@
-import { Personne } from './../models/personne';
+import { Personne } from './../../models/personne';
+
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({

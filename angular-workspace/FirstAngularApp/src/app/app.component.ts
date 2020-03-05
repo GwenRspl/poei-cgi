@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'The best app in the whole world';
+  title = 'Home---';
   isAuth = false;
   appareils = ['aspirateur', 'micro-onde', 'four', 'lave-vaisselle'];
   username = 'Gwen';
