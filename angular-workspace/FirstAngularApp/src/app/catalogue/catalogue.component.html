@@ -19,14 +19,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of productsList | filter:searchString ">
-        <td>{{item.productId}}</td>
-        <td>{{item.productName}}</td>
-        <td>{{item.productCode}}</td>
-        <td>{{item.releaseDate}}</td>
-        <td>{{item.description}}</td>
-        <td>{{item.price}}€</td>
-        <td>{{item.starRating}}/5
+      <tr *ngFor="let product of productsList | filter:searchString ">
+        <td>{{product.productId}}</td>
+        <td>
+          <a [routerLink]="['/catalogue', product.productId]"> {{product.productName}}</a>
+        </td>
+        <td>{{product.productCode}}</td>
+        <td>{{product.releaseDate}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}€</td>
+        <td>{{product.starRating}}/5
           <star-rating value="4" checkedcolor="red" uncheckedcolor="black" size="24px" readonly="false" totalstars="5">
           </star-rating>
         </td>

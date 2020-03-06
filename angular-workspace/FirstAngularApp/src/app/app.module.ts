@@ -2,7 +2,7 @@ import { PersonneComponent } from './tp-personne/personne/personne.component';
 import { FormulairePersonneComponent } from './tp-personne/formulaire-personne/formulaire-personne.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { RatingModule } from 'ng-starrating';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
+import { ProductDetailComponent } from './catalogue/product-detail/product-detail.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +31,17 @@ import { FilterPipe } from './filter.pipe';
     HomeComponent,
     PageNotFoundComponent,
     CatalogueComponent,
-    FilterPipe
+    FilterPipe,
+    ProductDetailComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RatingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

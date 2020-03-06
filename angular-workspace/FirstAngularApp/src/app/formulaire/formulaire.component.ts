@@ -19,6 +19,7 @@ export class FormulaireComponent implements OnInit {
   onSubmit() {
     let result = `${this.email} ${this.nom} ${this.prenom} ${this.birthday}`;
     console.log(result);
+    localStorage.setItem('connected', this.nom);
   }
 
 }
